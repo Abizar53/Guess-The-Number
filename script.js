@@ -1,6 +1,7 @@
 let random_number=parseInt(Math.random() * 100 + 1 )
 console.log(random_number)
 
+let UserInput=document.querySelector('#guessInput')
 
 //submit button
 Submit_Btn.addEventListener("submit" , function(e){
