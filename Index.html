@@ -4,26 +4,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guess Game</title>
+    <title>Two Player Guessing Game</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <div class="game-container">
-      <h1>Guess the Number</h1>
-
-      <p>Guess a number between 1 and 100</p>
+      <h2 id="playerTitle">Player 1: Enter your secret number</h2>
 
       <form id="guessForm">
-        <label for="guessInput">Your Guess</label>
-
-        <input type="number" id="guessInput" />
-
-        <button type="submit" id="Submit">Submit Guess</button>
+        <label id="guessLabel" for="guessInput">Enter your secret number</label>
+        <input type="password" id="guessInput" min="1" max="100" required />
+        <button type="submit" id="Submit">Submit</button>
       </form>
+
+      <p id="message"></p>
 
       <!-- Game Information -->
       <div class="game-info">
+        <h2 id="currentPlayer">Player 1</h2>
+
         <p>
           Previous Guesses:
           <span id="previousGuesses"></span>
@@ -39,6 +39,6 @@
       <div id="startOver"></div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="Multi_player.js"></script>
   </body>
 </html>
