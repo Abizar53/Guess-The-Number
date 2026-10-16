@@ -41,3 +41,13 @@ function Validate_input (User_Guessed){
         }
     }
 }
+function Check_Guess (User_Guessed){
+    if(User_Guessed===random_number){
+        Display_Message("you guessed it right") 
+        End_Game()
+    } else if (User_Guessed<random_number) {
+        Display_Message("Your guess is too low");
+    }else {
+        Display_Message("your guess is too highh")
+}
+}
