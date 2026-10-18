@@ -26,3 +26,13 @@ body {
   background: var(--bg-gradient);
   color: var(--text-color);
 }
+/* Game Container */
+.game-container {
+  width: 90%;
+  max-width: 420px;
+  padding: 30px;
+  background-color: var(--container-bg);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
