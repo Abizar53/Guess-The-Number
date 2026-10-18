@@ -41,6 +41,7 @@ function Validate_input (User_Guessed){
         }
     }
 }
+
 function Check_Guess (User_Guessed){
     if(User_Guessed===random_number){
         Display_Message("you guessed it right") 
@@ -50,4 +51,13 @@ function Check_Guess (User_Guessed){
     }else {
         Display_Message("your guess is too highh")
 }
+}
+
+function Display_Guess (User_Guessed){
+    guess_Slot.innerHTML+=`${User_Guessed}   `
+    no_of_Guess++
+    Remaining_Chances.innerHTML=`${11-no_of_Guess}`
+}
+function Display_Message (Message){
+    Low_or_High.innerHTML=`<h2> ${Message} </h2>`
 }
