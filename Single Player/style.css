@@ -1,0 +1,28 @@
+:root {
+  --primary-color: #009688; /* Teal accent */
+  --primary-hover: #00796B; /* Slightly darker teal */
+  --bg-gradient: linear-gradient(135deg, #FF7E5F, #FEB47B); /* Sunset gradient */
+  --container-bg: #f5f5f5; /* Light gray container */
+  --input-bg: rgba(0,150,136,0.1); /* Light teal input background */
+  --info-bg: rgba(255,255,255,0.8); /* Slightly translucent info panel */
+  --text-color: #333333; /* Dark text */
+  --font-family: 'Arial', sans-serif;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family);
+  background: var(--bg-gradient);
+  color: var(--text-color);
+}
