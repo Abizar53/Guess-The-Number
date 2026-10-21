@@ -61,3 +61,14 @@ function Display_Guess (User_Guessed){
 function Display_Message (Message){
     Low_or_High.innerHTML=`<h2> ${Message} </h2>`
 }
+function End_Game(User_Guessed){
+    UserInput.value=''
+    UserInput.setAttribute('disabled','')
+    document.querySelector('#Submit').disabled = true;
+    p.classList.add('button')
+    p.innerHTML='<button id=newGame> Start NewGame </button>'
+    StartOver_Container.appendChild(p)
+    playGame=false
+    StartOver()
+
+}
