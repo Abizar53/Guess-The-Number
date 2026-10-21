@@ -1,3 +1,4 @@
+/* Updated styling – Sunset gradient with teal accent */
 :root {
   --primary-color: #009688; /* Teal accent */
   --primary-hover: #00796B; /* Slightly darker teal */
@@ -26,6 +27,7 @@ body {
   background: var(--bg-gradient);
   color: var(--text-color);
 }
+
 /* Game Container */
 .game-container {
   width: 90%;
@@ -35,4 +37,27 @@ body {
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Headings */
+h1 {
+  margin-bottom: 15px;
+}
+
+/* Paragraphs inside container */
+.game-container > p {
+  margin-bottom: 20px;
+}
+
+/* Form */
+#guessForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Labels */
+#guessForm label {
+  text-align: left;
+  font-weight: bold;
 }
