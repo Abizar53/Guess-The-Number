@@ -61,3 +61,61 @@ h1 {
   text-align: left;
   font-weight: bold;
 }
+
+/* Input */
+#guessInput {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  transition: border-color 0.2s ease-in-out;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+#guessInput:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+/* Button */
+#guessForm button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#guessForm button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Game Information */
+.game-info {
+  margin-top: 25px;
+  padding: 20px;
+  background-color: var(--info-bg);
+  border-radius: 8px;
+  text-align: left;
+}
+
+/* Game info paragraphs */
+.game-info p {
+  margin-bottom: 12px;
+}
+
+.game-info p:last-child {
+  margin-bottom: 0;
+}
+
+/* Highlighted stats */
+#previousGuesses,
+#remainingGuesses,
+#lowOrHigh {
+  font-weight: bold;
+  text-align: center;
+}
