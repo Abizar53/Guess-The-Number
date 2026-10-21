@@ -72,3 +72,17 @@ function End_Game(User_Guessed){
     StartOver()
 
 }
+function StartOver (User_Guessed){
+    const newGameBTN=document.querySelector("#newGame")
+    newGameBTN.addEventListener("click", function(e){
+        random_number=parseInt(Math.random() * 100 + 1 )
+        console.log(`Random number : ${random_number}`)
+        Prev_Guess=[]
+        no_of_Guess=0
+        guess_Slot.innerHTML=''
+        Remaining_Chances.innerHTML=''
+        UserInput.removeAttribute('disabled')
+         document.querySelector('#Submit').disabled = false
+        playGame=true
+    })
+}
