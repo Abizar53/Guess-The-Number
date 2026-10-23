@@ -48,3 +48,15 @@ form_Element.addEventListener("submit", function (event) {
       // guessInput.disabled = true;
       // document.querySelector("#Submit").disabled = true;
     }
+
+    
+    guessInput.value = "";
+    // both player number are
+    if (secretNumberPlayer1 && secretNumberPlayer2) {
+      console.log("Player 1 secret:", secretNumberPlayer1);
+      console.log("Player 2 secret:", secretNumberPlayer2);
+      gamePhase = "guess";
+      guessLabel.innerText = "Enter number between 1 to 100";
+    }
+    return;
+  }
