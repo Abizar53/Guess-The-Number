@@ -28,3 +28,23 @@ form_Element.addEventListener("submit", function (event) {
   // Validating
   if (gamePhase === "setup" && secret_Number >= 1 && secret_Number <= 100) {
     Message.innerText = "Enter a number between 1 and 100";
+
+    // Storing number in player 1,2
+    if (currentPlayer === 1) {
+      secretNumberPlayer1 = secret_Number;
+      currentPlayer = 2;
+      console.log(`Current player is ${currentPlayer}, Right now`);
+
+      // printing next player message
+      PlayerTitle.innerText = "Player 2: Enter your secret number";
+      Message.innerText = "Player 1's number saved!";
+    } else {
+      secretNumberPlayer2 = secret_Number;
+      gamePhase = "guess";
+      currentPlayer = 1;
+      console.log(`Now the current player is ${currentPlayer} Right now`);
+      PlayerTitle.innerText = "Both players have entered their numbers!";
+      Message.innerText = "Secret numbers saved. Ready to start guessing!";
+      // guessInput.disabled = true;
+      // document.querySelector("#Submit").disabled = true;
+    }
