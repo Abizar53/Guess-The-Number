@@ -60,3 +60,17 @@ form_Element.addEventListener("submit", function (event) {
     }
     return;
   }
+
+  if (gamePhase === "guess") {
+    const targetNumber =
+      currentPlayer === 1 ? secretNumberPlayer2 : secretNumberPlayer1;
+    guessInput.type = "number";
+    let Guess = parseInt(guessInput.value);
+    guessInput.value = "";
+
+    PlayerTitle.innerText = "Player 1: Guess Player 2's secret number";
+    label_input.innerText = "Your guess";
+
+    remainingGuesses.innerText = `Guesses remaining: ${noOfGuesses}`;
+
+    
