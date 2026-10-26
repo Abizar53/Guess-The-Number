@@ -103,3 +103,17 @@ form_Element.addEventListener("submit", function (event) {
 
   guessInput.value = "";
 });
+
+
+
+// Phase 2 Gamesetup
+// Both player have stored thier input, now we start the game
+
+function switchPlayer() {
+  if (currentPlayer === 1) {
+    currentPlayer = 2;
+  } else {
+    currentPlayer = 1;
+  }
+}
+
