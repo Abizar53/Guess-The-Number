@@ -77,3 +77,18 @@ form_Element.addEventListener("submit", function (event) {
     remainingGuesses.innerText = `Guesses remaining: ${
       noOfGuesses - (currentPlayer === 1 ? player1Guess : player2Guess)
     };
+
+
+
+    // Phase 4 : Checking the winning condition
+
+    if (Guess === targetNumber) {
+      Message.innerText = `Player ${currentPlayer} wins!`;
+      gamePhase = "over";
+      guessInput.disabled = true;
+      Submit_BTN.disabled = true;
+      return;
+    }
+  }
+
+  
