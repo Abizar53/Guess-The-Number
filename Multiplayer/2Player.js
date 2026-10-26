@@ -73,4 +73,7 @@ form_Element.addEventListener("submit", function (event) {
 
     remainingGuesses.innerText = `Guesses remaining: ${noOfGuesses}`;
 
-    
+    PreviousGuess.innerText += Player ${currentPlayer}:${Guess}\n`;
+    remainingGuesses.innerText = `Guesses remaining: ${
+      noOfGuesses - (currentPlayer === 1 ? player1Guess : player2Guess)
+    };
