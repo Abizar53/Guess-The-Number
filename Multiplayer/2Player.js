@@ -91,4 +91,15 @@ form_Element.addEventListener("submit", function (event) {
     }
   }
 
-  
+  // Incorrect guess
+  Message.innerText = "Wrong guess! Turn switched.";
+  switchPlayer();
+  // Update the interface for the next player
+  PlayerTitle.innerText = `Player ${currentPlayer}: Guess your opponent's number`;
+
+  remainingGuesses.innerText = `Guesses remaining: ${
+    noOfGuesses - (currentPlayer === 1 ? player1Guess : player2Guess)
+  }`;
+
+  guessInput.value = "";
+});
