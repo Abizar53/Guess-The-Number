@@ -7,3 +7,15 @@
     <title>Two Player Guessing Game</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
+    <body>
+    <div class="game-container">
+      <h2 id="playerTitle">Player 1: Enter your secret number</h2>
+
+      <form id="guessForm">
+        <label id="guessLabel" for="guessInput">Enter your secret number</label>
+        <input type="password" id="guessInput" min="1" max="100" required />
+        <button type="submit" id="Submit">Submit</button>
+      </form>
+
+      <p id="message"></p>
