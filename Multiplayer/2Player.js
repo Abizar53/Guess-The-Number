@@ -17,8 +17,6 @@ let PreviousGuess = document.querySelector("#previousGuesses");
 let remainingGuesses = document.querySelector("#remainingGuesses");
 let label_input = document.querySelector("#guessLabel");
 
-
-
 // Phase 1 : Storing both player secret number
 PlayerTitle.innerText = "Player 1: Enter your secret number";
 form_Element.addEventListener("submit", function (event) {
@@ -49,7 +47,6 @@ form_Element.addEventListener("submit", function (event) {
       // document.querySelector("#Submit").disabled = true;
     }
 
-    
     guessInput.value = "";
     // both player number are
     if (secretNumberPlayer1 && secretNumberPlayer2) {
@@ -73,13 +70,22 @@ form_Element.addEventListener("submit", function (event) {
 
     remainingGuesses.innerText = `Guesses remaining: ${noOfGuesses}`;
 
-    PreviousGuess.innerText += Player ${currentPlayer}:${Guess}\n`;
+    // Phase 3: Guessing other Player Number
+
+    let current_GuessCount;
+
+    if (currentPlayer === 1) {
+      player1Guess++;
+      current_GuessCount = player1Guess;
+    } else {
+      player2Guess++;
+      current_GuessCount = player2Guess;
+    }
+
+    PreviousGuess.innerText += `Player ${currentPlayer}:${Guess}\n`;
     remainingGuesses.innerText = `Guesses remaining: ${
       noOfGuesses - (currentPlayer === 1 ? player1Guess : player2Guess)
     };
-
-
-
     // Phase 4 : Checking the winning condition
 
     if (Guess === targetNumber) {
@@ -104,11 +110,9 @@ form_Element.addEventListener("submit", function (event) {
   guessInput.value = "";
 });
 
-
-
 // Phase 2 Gamesetup
 // Both player have stored thier input, now we start the game
-
+// switch turns
 function switchPlayer() {
   if (currentPlayer === 1) {
     currentPlayer = 2;
@@ -116,4 +120,3 @@ function switchPlayer() {
     currentPlayer = 1;
   }
 }
-
